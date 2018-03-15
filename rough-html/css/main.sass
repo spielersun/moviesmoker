@@ -1,0 +1,346 @@
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////// Variables
+
+
+$color-dark:#1c1c1c
+$color-darkest:#000000
+$color-light:#e6e5e6
+$color-alter:#F0B300
+$color:#ffcc00
+
+$shadow:rgba(0, 0, 0, 0.5)
+
+$font:'Hammersmith One', sans-serif
+
+$font-size-medium:16px
+$font-size-text:20px
+$font-size-subheader:24px
+$font-size-header:30px
+
+$icon-add:url('../images/icon/icon_add.png')
+$icon-calendar:url('../images/icon/icon_calendar.png')
+$icon-start:url('../images/icon/icon_start.png')
+$icon-settings:url('../images/icon/icon_settings.png')
+
+$logo-main:url('../images/logo/logo_main.png')
+
+$navs:add calendar start settings
+
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////// Mixins & Functions
+
+=hover-transition($time)
+    -webkit-transition: all $time ease-in-out
+    -moz-transition: all $time ease-in-out
+    -opera-transition: all $time ease-in-out
+=btn-txt-hover
+    color:$color
+    &:hover
+        color:$color-light
+        text-decoration:none
+    &:active
+        color:$color-light
+        text-decoration:none
+=inside-shadow($shadow-size, $shadow-color)
+    -moz-box-shadow: inset 0 0 $shadow-size $shadow-color
+    -webkit-box-shadow: inset 0 0 $shadow-size $shadow-color
+    box-shadow: inset 0 0 $shadow-size $shadow-color
+=header-element
+    height:150px
+    float:left
+=nav-element
+    +header-element
+    width:36px
+    margin-right:15px
+    +hover-transition(0.3s)
+    &:hover
+        opacity:0.7
+=form-element
+    width:90%
+    margin:10px 5%
+    float:left
+    font-family:$font
+    font-size:$font-size-subheader
+    border:none
+=text-border
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+=btn-box
+    width:40px
+    height:40px
+    padding-top:10px
+    float:left
+    margin-left:1px
+    text-align:Center
+    color:$color-dark
+    background:$color
+    font-family:$font
+    +hover-transition(0.3s)
+    &:hover
+        background:$color-light
+        text-decoration:none
+        cursor:pointer
+=lbl-box
+    width:260px
+    margin:10px
+    float:left
+    font-family:$font
+    color:$color
+    font-size:$font-size-medium
+=box
+    width:450px
+    height:150px
+    left:0px
+    top:0px
+    position:absolute
+    display:none
+    z-index:50
+    background-color:$shadow
+    a.bck
+        +btn-box
+        position:absolute
+        right:0px
+    span
+        +lbl-box
+    ul
+        width:450px
+        margin-top:110px
+        float:left
+        li
+            width:40px
+            height:40px
+            float:left
+            background:none
+            margin:0px
+            overflow:hidden
+            position:relative
+            &.tag
+                width:50px
+            span.tag_que
+                +btn-box
+                width:50px
+                margin:0px
+            a
+                +btn-box
+                &.active
+                    background-color:$color-dark
+                    color:$color
+    
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////// General Styles
+
+header
+    width:1840px
+    margin:25px 0px 5px 25px
+    height:150px
+    h1
+        +header-element
+        background:$color-dark
+        margin:0px 10px 0px 0px
+    .logo-main
+        +header-element
+        width:450px
+        background:$logo-main
+        background-position:55px 55px
+        background-repeat:no-repeat
+nav
+    +header-element
+    ul
+        height:150px
+        width:450px
+        float:left
+        margin:0px 10px 0px 0px
+        li
+            float:left
+            width:150px
+            a
+                font-size:$font-size-subheader
+                font-family:$font
+                width:150px
+                height:150px
+                float:left
+                color:$color
+                +hover-transition(0.3s)
+                text-align:center
+                background:$color-dark
+                font-family:$font
+                padding:60px 0px 0px 0px
+                &:hover,&:active
+                    background:$color
+                    color:$color-dark
+                    text-decoration:none
+                    cursor:pointer  
+    .msdescr
+        height:150px
+        width:450px
+        float:left
+        margin:0px 10px 0px 0px
+        font-size:$font-size-subheader
+        font-family:$font
+        color:$color
+        background-color:$color-dark
+        padding:25px 25px
+        text-align:center
+section
+    width:100%
+    float:left
+    padding-left:20px
+.list-movies
+    width:100%
+    height:auto
+    float:left
+    li
+        width:450px
+        height:150px
+        float:left
+        background:$color
+        margin:5px
+        overflow:hidden
+        position:relative
+        img
+            width:450px
+            height:auto
+            float:left
+        .title
+            +text-border
+            width:430px
+            margin:10px
+            font-family:$font
+            font-size:$font-size-text
+            color:$color
+            line-height:1.3
+            position:absolute
+            bottom:0px
+            left:0px
+            z-index:42
+        .actions
+            width:123px
+            height:50px
+            position:absolute
+            right:0px
+            top:0px
+            display:none
+            a
+                +btn-box
+        .box_add
+            +box
+        .box_wnt
+            +box
+        .box_del
+            +box
+.form
+    width:910px
+    height:470px
+    float:left
+    background:$color
+    margin:5px
+    &-title
+        +form-element
+        font-size:$font-size-header
+        color:$color-dark
+        text-align:right
+    &-tag
+        +form-element
+        color:$color-dark
+        margin:0px 5% 5px 5%
+    &-text
+        +form-element
+        color:$color-dark
+        +inside-shadow(10px, $color-dark)
+        padding:5px 8px
+        font-size:$font-size-text
+        background:$color-light
+        margin:0px 5% 15px 5%
+    &-button
+        +form-element
+        width:20%
+        float:right
+        color:$color
+        background:$color-dark
+        +hover-transition(0.3s)
+        &:hover
+            color:$color-light
+.form-small
+    width:450px
+    height:470px
+    float:left
+    background:$color
+    margin:5px
+    &-title
+        +form-element
+        font-size:$font-size-header
+        color:$color-dark
+        text-align:right
+        height:32px
+    &-tag
+        +form-element
+        color:$color-dark
+        margin:0px 5% 5px 5%
+    &-text
+        +form-element
+        color:$color-dark
+        +inside-shadow(10px, $color-dark)
+        padding:5px 8px
+        font-size:$font-size-text
+        background:$color-light
+        margin:0px 5% 15px 5%
+    &-button
+        +form-element
+        font-size:$font-size-header
+        padding:20px
+        margin-top:305px
+        float:center
+        color:$color
+        background:$color-dark
+        +hover-transition(0.3s)
+        &:hover
+            color:$color-light
+.movie
+    width:800px
+    height:500px
+    float:left
+    background:$color
+    &-title
+        +form-element
+        font-size:$font-size-header
+        color:$color-dark
+        text-align:right
+    &-text
+        +form-element
+        color:$color-dark
+        margin:0px 5% 5px 5%
+.vote-twodime
+    width:410px
+    float:left
+    margin-left:18px
+    li
+        width:41px
+        height:41px
+        float:left
+        a
+            +btn-box
+            color:$color
+            background:$color-dark
+            margin-bottom:1px
+
+    
+    
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////// Fixes
+    
+ul
+    padding:0px
+    margin:0px
+    list-style:none
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default
+    cursor:pointer
+
+
+        
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////// 
+

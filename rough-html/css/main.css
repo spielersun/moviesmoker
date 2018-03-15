@@ -1,0 +1,635 @@
+/* line 134, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+header {
+  width: 1840px;
+  margin: 25px 0px 5px 25px;
+  height: 150px; }
+  /* line 138, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+  header h1 {
+    height: 150px;
+    float: left;
+    background: #1c1c1c;
+    margin: 0px 10px 0px 0px; }
+  /* line 142, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+  header .logo-main {
+    height: 150px;
+    float: left;
+    width: 450px;
+    background: url("../images/logo/logo_main.png");
+    background-position: 55px 55px;
+    background-repeat: no-repeat; }
+
+/* line 148, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+nav {
+  height: 150px;
+  float: left; }
+  /* line 150, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+  nav ul {
+    height: 150px;
+    width: 450px;
+    float: left;
+    margin: 0px 10px 0px 0px; }
+    /* line 155, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+    nav ul li {
+      float: left;
+      width: 150px; }
+      /* line 158, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+      nav ul li a {
+        font-size: 24px;
+        font-family: "Hammersmith One", sans-serif;
+        width: 150px;
+        height: 150px;
+        float: left;
+        color: #ffcc00;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -opera-transition: all 0.3s ease-in-out;
+        text-align: center;
+        background: #1c1c1c;
+        font-family: "Hammersmith One", sans-serif;
+        padding: 60px 0px 0px 0px; }
+        /* line 170, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+        nav ul li a:hover, nav ul li a:active {
+          background: #ffcc00;
+          color: #1c1c1c;
+          text-decoration: none;
+          cursor: pointer; }
+  /* line 175, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+  nav .msdescr {
+    height: 150px;
+    width: 450px;
+    float: left;
+    margin: 0px 10px 0px 0px;
+    font-size: 24px;
+    font-family: "Hammersmith One", sans-serif;
+    color: #ffcc00;
+    background-color: #1c1c1c;
+    padding: 25px 25px;
+    text-align: center; }
+
+/* line 186, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+section {
+  width: 100%;
+  float: left;
+  padding-left: 20px; }
+
+/* line 190, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+.list-movies {
+  width: 100%;
+  height: auto;
+  float: left; }
+  /* line 194, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+  .list-movies li {
+    width: 450px;
+    height: 150px;
+    float: left;
+    background: #ffcc00;
+    margin: 5px;
+    overflow: hidden;
+    position: relative; }
+    /* line 202, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+    .list-movies li img {
+      width: 450px;
+      height: auto;
+      float: left; }
+    /* line 206, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+    .list-movies li .title {
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+      width: 430px;
+      margin: 10px;
+      font-family: "Hammersmith One", sans-serif;
+      font-size: 20px;
+      color: #ffcc00;
+      line-height: 1.3;
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      z-index: 42; }
+    /* line 218, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+    .list-movies li .actions {
+      width: 123px;
+      height: 50px;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      display: none; }
+      /* line 225, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+      .list-movies li .actions a {
+        width: 40px;
+        height: 40px;
+        padding-top: 10px;
+        float: left;
+        margin-left: 1px;
+        text-align: Center;
+        color: #1c1c1c;
+        background: #ffcc00;
+        font-family: "Hammersmith One", sans-serif;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -opera-transition: all 0.3s ease-in-out; }
+        /* line 80, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+        .list-movies li .actions a:hover {
+          background: #e6e5e6;
+          text-decoration: none;
+          cursor: pointer; }
+    /* line 227, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+    .list-movies li .box_add {
+      width: 450px;
+      height: 150px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      display: none;
+      z-index: 50;
+      background-color: rgba(0, 0, 0, 0.5); }
+      /* line 100, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+      .list-movies li .box_add a.bck {
+        width: 40px;
+        height: 40px;
+        padding-top: 10px;
+        float: left;
+        margin-left: 1px;
+        text-align: Center;
+        color: #1c1c1c;
+        background: #ffcc00;
+        font-family: "Hammersmith One", sans-serif;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -opera-transition: all 0.3s ease-in-out;
+        position: absolute;
+        right: 0px; }
+        /* line 80, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+        .list-movies li .box_add a.bck:hover {
+          background: #e6e5e6;
+          text-decoration: none;
+          cursor: pointer; }
+      /* line 104, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+      .list-movies li .box_add span {
+        width: 260px;
+        margin: 10px;
+        float: left;
+        font-family: "Hammersmith One", sans-serif;
+        color: #ffcc00;
+        font-size: 16px; }
+      /* line 106, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+      .list-movies li .box_add ul {
+        width: 450px;
+        margin-top: 110px;
+        float: left; }
+        /* line 110, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+        .list-movies li .box_add ul li {
+          width: 40px;
+          height: 40px;
+          float: left;
+          background: none;
+          margin: 0px;
+          overflow: hidden;
+          position: relative; }
+          /* line 118, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+          .list-movies li .box_add ul li.tag {
+            width: 50px; }
+          /* line 120, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+          .list-movies li .box_add ul li span.tag_que {
+            width: 40px;
+            height: 40px;
+            padding-top: 10px;
+            float: left;
+            margin-left: 1px;
+            text-align: Center;
+            color: #1c1c1c;
+            background: #ffcc00;
+            font-family: "Hammersmith One", sans-serif;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -opera-transition: all 0.3s ease-in-out;
+            width: 50px;
+            margin: 0px; }
+            /* line 80, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+            .list-movies li .box_add ul li span.tag_que:hover {
+              background: #e6e5e6;
+              text-decoration: none;
+              cursor: pointer; }
+          /* line 124, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+          .list-movies li .box_add ul li a {
+            width: 40px;
+            height: 40px;
+            padding-top: 10px;
+            float: left;
+            margin-left: 1px;
+            text-align: Center;
+            color: #1c1c1c;
+            background: #ffcc00;
+            font-family: "Hammersmith One", sans-serif;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -opera-transition: all 0.3s ease-in-out; }
+            /* line 80, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+            .list-movies li .box_add ul li a:hover {
+              background: #e6e5e6;
+              text-decoration: none;
+              cursor: pointer; }
+            /* line 126, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+            .list-movies li .box_add ul li a.active {
+              background-color: #1c1c1c;
+              color: #ffcc00; }
+    /* line 229, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+    .list-movies li .box_wnt {
+      width: 450px;
+      height: 150px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      display: none;
+      z-index: 50;
+      background-color: rgba(0, 0, 0, 0.5); }
+      /* line 100, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+      .list-movies li .box_wnt a.bck {
+        width: 40px;
+        height: 40px;
+        padding-top: 10px;
+        float: left;
+        margin-left: 1px;
+        text-align: Center;
+        color: #1c1c1c;
+        background: #ffcc00;
+        font-family: "Hammersmith One", sans-serif;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -opera-transition: all 0.3s ease-in-out;
+        position: absolute;
+        right: 0px; }
+        /* line 80, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+        .list-movies li .box_wnt a.bck:hover {
+          background: #e6e5e6;
+          text-decoration: none;
+          cursor: pointer; }
+      /* line 104, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+      .list-movies li .box_wnt span {
+        width: 260px;
+        margin: 10px;
+        float: left;
+        font-family: "Hammersmith One", sans-serif;
+        color: #ffcc00;
+        font-size: 16px; }
+      /* line 106, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+      .list-movies li .box_wnt ul {
+        width: 450px;
+        margin-top: 110px;
+        float: left; }
+        /* line 110, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+        .list-movies li .box_wnt ul li {
+          width: 40px;
+          height: 40px;
+          float: left;
+          background: none;
+          margin: 0px;
+          overflow: hidden;
+          position: relative; }
+          /* line 118, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+          .list-movies li .box_wnt ul li.tag {
+            width: 50px; }
+          /* line 120, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+          .list-movies li .box_wnt ul li span.tag_que {
+            width: 40px;
+            height: 40px;
+            padding-top: 10px;
+            float: left;
+            margin-left: 1px;
+            text-align: Center;
+            color: #1c1c1c;
+            background: #ffcc00;
+            font-family: "Hammersmith One", sans-serif;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -opera-transition: all 0.3s ease-in-out;
+            width: 50px;
+            margin: 0px; }
+            /* line 80, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+            .list-movies li .box_wnt ul li span.tag_que:hover {
+              background: #e6e5e6;
+              text-decoration: none;
+              cursor: pointer; }
+          /* line 124, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+          .list-movies li .box_wnt ul li a {
+            width: 40px;
+            height: 40px;
+            padding-top: 10px;
+            float: left;
+            margin-left: 1px;
+            text-align: Center;
+            color: #1c1c1c;
+            background: #ffcc00;
+            font-family: "Hammersmith One", sans-serif;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -opera-transition: all 0.3s ease-in-out; }
+            /* line 80, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+            .list-movies li .box_wnt ul li a:hover {
+              background: #e6e5e6;
+              text-decoration: none;
+              cursor: pointer; }
+            /* line 126, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+            .list-movies li .box_wnt ul li a.active {
+              background-color: #1c1c1c;
+              color: #ffcc00; }
+    /* line 231, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+    .list-movies li .box_del {
+      width: 450px;
+      height: 150px;
+      left: 0px;
+      top: 0px;
+      position: absolute;
+      display: none;
+      z-index: 50;
+      background-color: rgba(0, 0, 0, 0.5); }
+      /* line 100, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+      .list-movies li .box_del a.bck {
+        width: 40px;
+        height: 40px;
+        padding-top: 10px;
+        float: left;
+        margin-left: 1px;
+        text-align: Center;
+        color: #1c1c1c;
+        background: #ffcc00;
+        font-family: "Hammersmith One", sans-serif;
+        -webkit-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
+        -opera-transition: all 0.3s ease-in-out;
+        position: absolute;
+        right: 0px; }
+        /* line 80, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+        .list-movies li .box_del a.bck:hover {
+          background: #e6e5e6;
+          text-decoration: none;
+          cursor: pointer; }
+      /* line 104, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+      .list-movies li .box_del span {
+        width: 260px;
+        margin: 10px;
+        float: left;
+        font-family: "Hammersmith One", sans-serif;
+        color: #ffcc00;
+        font-size: 16px; }
+      /* line 106, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+      .list-movies li .box_del ul {
+        width: 450px;
+        margin-top: 110px;
+        float: left; }
+        /* line 110, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+        .list-movies li .box_del ul li {
+          width: 40px;
+          height: 40px;
+          float: left;
+          background: none;
+          margin: 0px;
+          overflow: hidden;
+          position: relative; }
+          /* line 118, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+          .list-movies li .box_del ul li.tag {
+            width: 50px; }
+          /* line 120, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+          .list-movies li .box_del ul li span.tag_que {
+            width: 40px;
+            height: 40px;
+            padding-top: 10px;
+            float: left;
+            margin-left: 1px;
+            text-align: Center;
+            color: #1c1c1c;
+            background: #ffcc00;
+            font-family: "Hammersmith One", sans-serif;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -opera-transition: all 0.3s ease-in-out;
+            width: 50px;
+            margin: 0px; }
+            /* line 80, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+            .list-movies li .box_del ul li span.tag_que:hover {
+              background: #e6e5e6;
+              text-decoration: none;
+              cursor: pointer; }
+          /* line 124, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+          .list-movies li .box_del ul li a {
+            width: 40px;
+            height: 40px;
+            padding-top: 10px;
+            float: left;
+            margin-left: 1px;
+            text-align: Center;
+            color: #1c1c1c;
+            background: #ffcc00;
+            font-family: "Hammersmith One", sans-serif;
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -opera-transition: all 0.3s ease-in-out; }
+            /* line 80, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+            .list-movies li .box_del ul li a:hover {
+              background: #e6e5e6;
+              text-decoration: none;
+              cursor: pointer; }
+            /* line 126, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+            .list-movies li .box_del ul li a.active {
+              background-color: #1c1c1c;
+              color: #ffcc00; }
+
+/* line 233, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+.form {
+  width: 910px;
+  height: 470px;
+  float: left;
+  background: #ffcc00;
+  margin: 5px; }
+  /* line 239, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+  .form-title {
+    width: 90%;
+    margin: 10px 5%;
+    float: left;
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 24px;
+    border: none;
+    font-size: 30px;
+    color: #1c1c1c;
+    text-align: right; }
+  /* line 244, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+  .form-tag {
+    width: 90%;
+    margin: 10px 5%;
+    float: left;
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 24px;
+    border: none;
+    color: #1c1c1c;
+    margin: 0px 5% 5px 5%; }
+  /* line 248, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+  .form-text {
+    width: 90%;
+    margin: 10px 5%;
+    float: left;
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 24px;
+    border: none;
+    color: #1c1c1c;
+    -moz-box-shadow: inset 0 0 10px #1c1c1c;
+    -webkit-box-shadow: inset 0 0 10px #1c1c1c;
+    box-shadow: inset 0 0 10px #1c1c1c;
+    padding: 5px 8px;
+    font-size: 20px;
+    background: #e6e5e6;
+    margin: 0px 5% 15px 5%; }
+  /* line 256, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+  .form-button {
+    width: 90%;
+    margin: 10px 5%;
+    float: left;
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 24px;
+    border: none;
+    width: 20%;
+    float: right;
+    color: #ffcc00;
+    background: #1c1c1c;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -opera-transition: all 0.3s ease-in-out; }
+    /* line 263, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+    .form-button:hover {
+      color: #e6e5e6; }
+
+/* line 265, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+.form-small {
+  width: 450px;
+  height: 470px;
+  float: left;
+  background: #ffcc00;
+  margin: 5px; }
+  /* line 271, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+  .form-small-title {
+    width: 90%;
+    margin: 10px 5%;
+    float: left;
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 24px;
+    border: none;
+    font-size: 30px;
+    color: #1c1c1c;
+    text-align: right;
+    height: 32px; }
+  /* line 277, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+  .form-small-tag {
+    width: 90%;
+    margin: 10px 5%;
+    float: left;
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 24px;
+    border: none;
+    color: #1c1c1c;
+    margin: 0px 5% 5px 5%; }
+  /* line 281, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+  .form-small-text {
+    width: 90%;
+    margin: 10px 5%;
+    float: left;
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 24px;
+    border: none;
+    color: #1c1c1c;
+    -moz-box-shadow: inset 0 0 10px #1c1c1c;
+    -webkit-box-shadow: inset 0 0 10px #1c1c1c;
+    box-shadow: inset 0 0 10px #1c1c1c;
+    padding: 5px 8px;
+    font-size: 20px;
+    background: #e6e5e6;
+    margin: 0px 5% 15px 5%; }
+  /* line 289, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+  .form-small-button {
+    width: 90%;
+    margin: 10px 5%;
+    float: left;
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 24px;
+    border: none;
+    font-size: 30px;
+    padding: 20px;
+    margin-top: 305px;
+    float: center;
+    color: #ffcc00;
+    background: #1c1c1c;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -opera-transition: all 0.3s ease-in-out; }
+    /* line 298, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+    .form-small-button:hover {
+      color: #e6e5e6; }
+
+/* line 300, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+.movie {
+  width: 800px;
+  height: 500px;
+  float: left;
+  background: #ffcc00; }
+  /* line 305, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+  .movie-title {
+    width: 90%;
+    margin: 10px 5%;
+    float: left;
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 24px;
+    border: none;
+    font-size: 30px;
+    color: #1c1c1c;
+    text-align: right; }
+  /* line 310, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+  .movie-text {
+    width: 90%;
+    margin: 10px 5%;
+    float: left;
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 24px;
+    border: none;
+    color: #1c1c1c;
+    margin: 0px 5% 5px 5%; }
+
+/* line 314, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+.vote-twodime {
+  width: 410px;
+  float: left;
+  margin-left: 18px; }
+  /* line 318, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+  .vote-twodime li {
+    width: 41px;
+    height: 41px;
+    float: left; }
+    /* line 322, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+    .vote-twodime li a {
+      width: 40px;
+      height: 40px;
+      padding-top: 10px;
+      float: left;
+      margin-left: 1px;
+      text-align: Center;
+      color: #1c1c1c;
+      background: #ffcc00;
+      font-family: "Hammersmith One", sans-serif;
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -opera-transition: all 0.3s ease-in-out;
+      color: #ffcc00;
+      background: #1c1c1c;
+      margin-bottom: 1px; }
+      /* line 80, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+      .vote-twodime li a:hover {
+        background: #e6e5e6;
+        text-decoration: none;
+        cursor: pointer; }
+
+/* line 334, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none; }
+
+/* line 338, C:/Users/Spielersun/Dropbox/projects/moviesmoker/css/main.sass */
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+  cursor: pointer; }
+
+/*# sourceMappingURL=main.css.map */
