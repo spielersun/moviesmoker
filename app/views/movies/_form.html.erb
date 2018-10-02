@@ -1,0 +1,111 @@
+<%= form_for @movie do |f| %>
+ 
+  <% if @movie.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@movie.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @movie.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+    <p>
+        <%= f.label :name %><br>
+        <%= f.text_field :name %>
+    </p>
+    <p>
+        <%= f.label :year %><br>
+        <%= f.text_field :year %>
+    </p>
+    <p>
+        <%= f.label :imdb %><br>
+        <%= f.text_field :imdb %>
+    </p>
+    <p>
+        <%= f.label :genres %><br>
+        <%= f.text_area :genres %>
+    </p>
+    <p>
+        <%= f.label :cover_image %><br>
+        <%= f.text_field :cover_image %>
+    </p>
+    
+
+
+
+    <p>
+        <%= f.label :mood_fast %><br>
+        <%= f.text_field :mood_fast %>
+    </p>
+    <p>
+        <%= f.label :mood_imaginary %><br>
+        <%= f.text_field :mood_imaginary %>
+    </p>
+    <p>
+        <%= f.label :mood_colored %><br>
+        <%= f.text_field :mood_colored %>
+    </p>
+    <p>
+        <%= f.label :mood_comedy %><br>
+        <%= f.text_field :mood_comedy %>
+    </p>
+    <p>
+        <%= f.label :mood_intelligent %><br>
+        <%= f.text_field :mood_intelligent %>
+    </p>
+    <p>
+        <%= f.label :mood_ambient %><br>
+        <%= f.text_field :mood_ambient %>
+    </p>
+    <p>
+        <%= f.label :mood_diverse %><br>
+        <%= f.text_field :mood_diverse %>
+    </p>
+    <p>
+        <%= f.label :mood_wibbly %><br>
+        <%= f.text_field :mood_wibbly %>
+    </p>
+    <p>
+        <%= f.label :mood_talky %><br>
+        <%= f.text_field :mood_talky %>
+    </p>
+    <p>
+        <%= f.label :mood_known %><br>
+        <%= f.text_field :mood_known %>
+    </p>
+    <p>
+        <%= f.label :mood_characteristic %><br>
+        <%= f.text_field :mood_characteristic %>
+    </p>
+
+
+    <p>
+        <%= f.label :env_group %><br>
+        <%= f.text_field :env_group %>
+    </p>
+    <p>
+        <%= f.label :env_theater %><br>
+        <%= f.text_field :env_theater %>
+    </p>
+    <p>
+        <%= f.label :env_consume %><br>
+        <%= f.text_field :env_consume %>
+    </p>
+    <p>
+        <%= f.label :personal_age %><br>
+        <%= f.text_field :personal_age %>
+    </p>
+    <p>
+        <%= f.label :personal_gender %><br>
+        <%= f.text_field :personal_gender %>
+    </p>
+  <p>
+    <%= f.submit 'SAVE', :class => 'ms_btn_box'%>
+  </p>
+ 
+<% end %>

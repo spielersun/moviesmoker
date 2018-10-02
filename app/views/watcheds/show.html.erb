@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Movie:</strong>
+  <%= @watched.movie_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @watched.user_id %>
+</p>
+
+<p>
+  <strong>Add date:</strong>
+  <%= @watched.add_date %>
+</p>
+
+<%= link_to 'Edit', edit_watched_path(@watched) %> |
+<%= link_to 'Back', watcheds_path %>

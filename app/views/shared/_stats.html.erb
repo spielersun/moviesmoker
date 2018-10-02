@@ -1,0 +1,33 @@
+<% @user ||= current_user %>
+<div class="stats">
+    <a href="<%= following_user_path(@user) %>">
+        <strong id="following" class="stat">
+        <%= @user.following.count %>
+        </strong>
+        following
+    </a>
+    <a href="<%= followers_user_path(@user) %>">
+        <strong id="followers" class="stat">
+            <%= @user.followers.count %>
+        </strong>
+        followers
+    </a>
+    <a href="#">
+        <strong id="watcheds" class="stat">
+            <%= @user.watcheds.count %>
+        </strong>
+        watched
+    </a>
+    <a href="#">
+        <strong id="wishlsts" class="stat">
+            <%= @user.wishlsts.count %>
+        </strong>
+        wishlst
+    </a>
+    <a href="#">
+        <strong id="bnndlsts" class="stat">
+            <%= @user.bnndlsts.count %>
+        </strong>
+        bnndlst
+    </a>
+</div>

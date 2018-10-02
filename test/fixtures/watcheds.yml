@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  movie_id: 1
+  user_id: 1
+  add_date: 2016-05-26 00:29:27
+
+two:
+  movie_id: 1
+  user_id: 1
+  add_date: 2016-05-26 00:29:27

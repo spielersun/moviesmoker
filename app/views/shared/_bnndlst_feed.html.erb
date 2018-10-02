@@ -1,0 +1,13 @@
+<% @bnndlst_feed.each do |feed| %>
+    <li>
+        <span class="following_feed_name">
+            <%= User.find(feed.user_id).name %> 
+        </span>
+        <span class="following_feed_movie">
+            <%= Movie.find(feed.movie_id).name %>
+        </span>
+        <span class="following_feed_date">
+            <%= feed.add_time.to_formatted_s(:short) %>
+        </span>
+    </li>
+<% end %>

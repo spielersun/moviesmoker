@@ -1,0 +1,80 @@
+<%= form_for @user do |f| %>
+
+    <%= render 'shared/error_messages', object: f.object %>
+
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+
+    <%= f.label :mail %>
+    <%= f.email_field :mail, class: 'form-control' %>
+
+    <%= f.label :password %>
+    <%= f.password_field :password, class: 'form-control' %>
+
+    <%= f.label :password_confirmation, "Confirmation" %>
+    <%= f.password_field :password_confirmation, 
+                            class: 'form-control' %>
+
+    <%= f.label :score %>
+    <%= f.text_field :score, class: 'form-control' %>
+
+    <%= f.label :fav_tags %>
+    <%= f.text_field :fav_tags, class: 'form-control' %>
+
+
+    <%= f.label :fav_mood_fast %>
+    <%= f.text_field :fav_mood_fast, class: 'form-control' %>
+    
+    <%= f.label :fav_mood_colored %>
+    <%= f.text_field :fav_mood_colored, class: 'form-control' %>
+
+    <%= f.label :fav_mood_comedy %>
+    <%= f.text_field :fav_mood_comedy, class: 'form-control' %>
+
+    <%= f.label :fav_mood_imaginary %>
+    <%= f.text_field :fav_mood_imaginary, class: 'form-control' %>
+    
+    <%= f.label :fav_mood_intelligent %>
+    <%= f.text_field :fav_mood_intelligent, class: 'form-control' %>
+
+    <%= f.label :fav_mood_ambient %>
+    <%= f.text_field :fav_mood_ambient, class: 'form-control' %>
+
+    <%= f.label :fav_mood_diverse %>
+    <%= f.text_field :fav_mood_diverse, class: 'form-control' %>
+    
+    <%= f.label :fav_mood_wibbly %>
+    <%= f.text_field :fav_mood_wibbly, class: 'form-control' %>
+
+    <%= f.label :fav_mood_talky %>
+    <%= f.text_field :fav_mood_talky, class: 'form-control' %>
+
+    <%= f.label :fav_mood_known %>
+    <%= f.text_field :fav_mood_known, class: 'form-control' %>
+    
+    <%= f.label :fav_mood_characteristic %>
+    <%= f.text_field :fav_mood_characteristic, class: 'form-control' %>
+
+
+
+    <%= f.label :fav_env_group %>
+    <%= f.text_field :fav_env_group, class: 'form-control' %>
+
+    <%= f.label :fav_env_theater %>
+    <%= f.text_field :fav_env_theater, class: 'form-control' %>
+    
+    <%= f.label :fav_env_consume %>
+    <%= f.text_field :fav_env_consume, class: 'form-control' %>
+
+
+    <%= f.label :birthdate %>
+    <%= f.text_field :birthdate, class: 'form-control' %>
+
+    <%= f.label :gender %>
+    <%= f.text_field :gender, class: 'form-control' %>
+
+
+
+    <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+
+<% end %>

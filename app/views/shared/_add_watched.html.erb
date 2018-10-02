@@ -1,0 +1,8 @@
+<%= form_for(@watcheds) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+
+    <%= hidden_field_tag :movie_id, @movie.id %>
+    <%= hidden_field_tag :add_date, Time.zone.now %>
+            
+    <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>

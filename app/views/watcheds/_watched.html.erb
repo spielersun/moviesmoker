@@ -1,0 +1,15 @@
+<li>
+<div class="ms_movie_watched">
+    <span class="ms_movie_watched_name">
+        <%= User.find(watched.user_id).name %>
+    </span>
+    <span class="ms_movie_watched_date">
+        <%= watched.add_date.to_formatted_s(:short) %>
+    </span>
+</div>
+<p>
+    <%= link_to 'Unwatched', [watched.movie, watched],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
+</li>

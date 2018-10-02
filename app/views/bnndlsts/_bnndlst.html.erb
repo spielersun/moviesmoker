@@ -1,0 +1,15 @@
+<li>
+    <div class="ms_movie_watched">
+    <span class="ms_movie_watched_name">
+        <%= User.find(bnndlst.user_id).name %>
+    </span>
+    <span class="ms_movie_watched_date">
+        <%= bnndlst.add_time.to_formatted_s(:short) %>
+    </span>
+</div>
+<p>
+    <%= link_to 'Unbnndlst', [bnndlst.movie, bnndlst],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>
+</li>

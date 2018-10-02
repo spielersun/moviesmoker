@@ -1,0 +1,11 @@
+<ul class="ms_section_movies">
+    <% @movie.each do |movie| %>
+    <li class="col-md-4">
+        <span class="ms_section_movies_title_vote">
+            <%= TitleVote.where(:commenter => current_user.id, :movie_id => movie.id).first.vote %>
+        </span>
+        <%= image_tag "movies/big/" + movie.cover_image if movie.cover_image? %>
+        <%= link_to movie.name, movie_path(movie) %>
+    </li>
+    <% end %>
+</ul>

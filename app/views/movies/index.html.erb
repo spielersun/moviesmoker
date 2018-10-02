@@ -1,0 +1,9 @@
+<ul class="ms_section_movies">
+    <% @reccs.each do |movie| %>
+    <li class="col-md-4">
+        <span class="<%= movie[:plcment] %>"></span>
+        <%= image_tag "movies/big/" + (Movie.find(movie[:id])).cover_image if (Movie.find(movie[:id])).cover_image? %>
+        <%= link_to (Movie.find(movie[:id])).name, movie_path(movie) %>
+    </li>
+    <% end %>
+</ul>

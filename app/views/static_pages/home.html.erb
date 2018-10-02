@@ -1,0 +1,53 @@
+<% if logged_in? %>
+
+    <div class="row">
+        <aside class="col-md-4">
+            <section class="user_info">
+                <%= render 'shared/user_info' %>
+            </section>
+            <section class="stats">
+                <%= render 'shared/stats' %>
+            </section>
+            <section class="micropost_form">
+                <%= render 'shared/micropost_form' %>
+            </section>
+        </aside>
+        <div class="col-md-8">
+            <h3>WALL</h3>
+            <%= render 'shared/feed' %>
+        </div>
+        <div class="col-md-12">
+            <div class="col-md-4">
+                <h3>WATCHED</h3>
+                <ul class="following_feed">
+                    <%= render 'shared/watched_feed' %>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>WISHLST</h3>
+                <ul class="following_feed">
+                    <%= render 'shared/wishlst_feed' %>
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <h3>BNNDLST</h3>
+                <ul class="following_feed">
+                    <%= render 'shared/bnndlst_feed' %>
+                </ul>
+            </div>
+        </div>
+  </div>
+
+<% else %>
+
+<div class="center jumbotron welcome">
+  <h1>Welcome to MOVIESMOKER</h1>
+
+  <h2>
+    <a href="http://www.moviesmoker.com/">MOVIE RECOMMENDATION ENGINE WITH AN ULTIMATE ACCURACY IN A SOCIAL NETWORK</a>
+  </h2>
+
+  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+</div>
+
+<% end %>

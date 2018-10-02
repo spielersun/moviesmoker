@@ -1,0 +1,11 @@
+<li>
+    <%= gravatar_for user, size: 64 %>
+    <%= link_to user.name, user, :class => 'ms_users_name' %>
+    <%= link_to '', user_path(user), :class => 'ms_users_show' %>
+    <%= link_to '', edit_user_path(user), :class => 'ms_users_edit' %>
+
+    <% if current_user.admin? && !current_user?(user) %>
+    | <%= link_to "delete", user, method: :delete,
+                    data: { confirm: "You sure?" } %>
+    <% end %>
+</li>

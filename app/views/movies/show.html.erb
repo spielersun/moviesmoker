@@ -1,0 +1,36 @@
+
+<div class="col-md-12 ms_movie">
+    <h2>
+        <span class="ms_movie_name"><%= @movie.name %></span>
+        <span class="ms_movie_year"><%= @movie.year %></span>
+    </h2> 
+    <%= image_tag "movies/big/" + @movie.cover_image if @movie.cover_image? %>
+</div>
+
+<div class="col-md-12 ms_movie_votes">
+    <ul class="ms_movie_votes_history">
+        <%= render @movie.title_votes %>
+    </ul>
+    <%= render 'title_votes/form' %>
+</div>
+
+<div class="col-md-12">
+    <div class="col-md-4">
+        <h2 class="ms_movie_header">WATCHED</h2>
+        <ul class="plcment_feed"><%= render @movie.watcheds %></ul>
+        <%= render 'watcheds/form' %>
+    </div>
+
+    <div class="col-md-4">
+        <h2 class="ms_movie_header">WISHLST</h2>
+        <ul class="plcment_feed"><%= render @movie.wishlsts %></ul>
+        <%= render 'wishlsts/form' %>
+    </div>
+
+    <div class="col-md-4">
+        <h2 class="ms_movie_header">BNNDLST</h2>
+        <ul class="plcment_feed"><%= render @movie.bnndlsts %></ul>
+        <%= render 'bnndlsts/form' %>
+    </div>
+</div>
+

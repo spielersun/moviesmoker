@@ -1,0 +1,21 @@
+<%= form_for([@movie, @movie.title_votes.build]) do |f| %>
+
+    <p class="col-md-5">
+        <a href="#" class="ms_movie_votes_vote">1</a>
+        <a href="#" class="ms_movie_votes_vote">2</a>
+        <a href="#" class="ms_movie_votes_vote">3</a>
+        <a href="#" class="ms_movie_votes_vote">4</a>
+        <a href="#" class="ms_movie_votes_vote">5</a>
+        <a href="#" class="ms_movie_votes_vote">6</a>
+        <a href="#" class="ms_movie_votes_vote">7</a>
+        <a href="#" class="ms_movie_votes_vote">8</a>
+        <a href="#" class="ms_movie_votes_vote">9</a>
+        <a href="#" class="ms_movie_votes_vote">10</a>
+        
+        <%= f.hidden_field :vote, :id => "vote_field"%>
+    </p>
+        
+    <p class="col-md-7">
+        <%= f.submit "VOTE", class: "btn-primary" %>
+    </p>
+<% end %>

@@ -1,0 +1,6 @@
+    <li>
+<%= User.find(title_vote.commenter).name %> : <%= title_vote.vote %> | 
+    <%= link_to 'X', [title_vote.movie, title_vote],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+        </li>

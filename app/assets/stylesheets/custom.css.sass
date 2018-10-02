@@ -1,0 +1,605 @@
+@import "bootstrap-sprockets"
+@import "bootstrap"
+
+/* universal */
+
+body
+    padding-top: 60px
+
+section
+    overflow: auto
+
+textarea
+    resize: vertical
+
+.center
+    text-align: center
+
+.center h1
+    margin-bottom: 10px
+    
+/* typography */
+
+h1, h2, h3, h4, h5, h6
+    line-height: 1
+
+h1
+    font-size: 3em
+    letter-spacing: -2px
+    margin-bottom: 30px
+    text-align: center
+
+h2
+    font-size: 1.2em
+    letter-spacing: -1px
+    margin-bottom: 30px
+    text-align: center
+    font-weight: normal
+    color: #777
+
+p
+    font-size: 1.1em
+    line-height: 1.7em
+    
+/* mixins, variables, etc. */
+
+$gray-medium-light: #eaeaea
+
+=box_sizing
+    -moz-box-sizing:    border-box
+    -webkit-box-sizing: border-box
+    box-sizing:         border-box
+
+/* miscellaneous */
+
+.debug_dump
+    clear: both
+    float: left
+    width: 100%
+    margin-top: 45px
+    +box_sizing
+    
+
+/* sidebar */
+
+aside
+    section.user_info
+        margin-top: 20px
+        .gravatar
+            float: left
+    section
+        padding: 10px 0
+        margin-top: 20px
+        &:first-child
+            border: 0
+            padding-top: 0
+    span
+        display: block
+        margin-bottom: 3px
+        line-height: 1
+    h1
+        font-size: 1.4em
+        text-align: left
+        letter-spacing: -1px
+        margin-bottom: 3px
+        margin-top: 0px
+
+.gravatar
+    margin-right: 10px
+
+.gravatar_edit
+    margin-top: 15px
+
+.user_avatars
+    overflow: auto
+    margin-top: 10px
+    .gravatar
+        margin: 1px 1px
+    a
+        padding: 0
+
+.users.follow
+    padding: 0
+    li
+        display: inline-block
+        margin-bottom: 10px
+        width: 100%
+    
+/* forms */
+
+input, textarea, select, .uneditable-input
+    border: 1px solid #bbb
+    width: 100%
+    margin-bottom: 15px
+    +box_sizing
+    
+input
+    height: auto !important
+    
+#error_explanation
+    color: red
+    ul
+        color: red
+        margin: 0 0 30px 0
+
+.field_with_errors
+    @extend .has-error
+    .form-control
+        color: $state-danger-text
+
+.checkbox
+    margin-top: -10px
+    margin-bottom: 10px
+    span
+        margin-left: 20px
+        font-weight: normal
+
+#session_remember_me
+    width: auto
+    margin-left: 0 
+        
+/* microposts */
+
+aside
+    textarea
+        height: 100px
+        margin-bottom: 5px
+
+span.picture
+    margin-top: 10px
+    input
+        border: 0
+        
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////// Variables
+
+$color-dark:#1c1c1c
+$color-darkest:#000000
+$color-light:#e6e5e6
+$color-alter:#F0B300
+$color:#ffcc00
+
+$shadow:rgba(0, 0, 0, 0.5)
+
+$font:'Hammersmith One', sans-serif
+
+$font-size-tiny:14px
+$font-size-medium:16px
+$font-size-text:20px
+$font-size-subheader:24px
+$font-size-header:30px
+$font-size-huge:36px
+
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////// Mixins & Functions
+
+=ms-hover-transition($time)
+    -webkit-transition: all $time ease-in-out
+    -moz-transition: all $time ease-in-out
+    -opera-transition: all $time ease-in-out
+    
+=ms-btn-submit
+    color: $color-dark
+    background-color: $color
+    border-color: $color
+    font-family: $font
+    +ms-hover-transition(0.3s)
+    border-radius: 0px
+    font-size: $font-size-text
+    padding: 12px 10px 10px 10px
+    &:hover
+        background-color: $color-darkest
+        border-color: $color-darkest
+        color: $color
+=text-border
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+    
+///////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////// General Styles
+
+.ms_head
+    background-color: $color-dark
+    border-color: $color-dark
+    .ms_head_nav
+        li
+            float: left
+            a
+                font-family: $font
+                font-size: $font-size-text
+                color: $color
+                +ms-hover-transition(0.3s)
+                padding-top: 17px
+                padding-bottom: 13px
+                &:hover
+                    background-color: $color-light
+                    color: $color-dark
+        .dropdown-menu
+            background-color: $color-dark
+            padding: 0px
+            li    
+                width: 100%
+    
+#logo
+    float: left
+    margin-right: 10px
+    margin-top: 10px
+    font-size: $font-size-huge
+    letter-spacing: -1px
+    line-height: 100%
+    font-weight: bold
+    font-family: $font
+    +ms-hover-transition(0.3s)
+    color: $color
+    text-decoration:none
+    &:hover
+        color: #fff
+        text-decoration: none
+    &:active
+        color: #fff
+        text-decoration: none
+    
+.btn-primary
+    +ms-btn-submit
+    
+h1
+    font-family: $font
+    
+.ms_section_form
+    background-color: $color-dark
+    padding: 20px
+    label
+        font-family: $font
+        font-size: $font-size-text
+        color:  $color
+        margin-bottom: 10px
+        font-weight: normal
+    input[type="text"], input[type="email"], input[type="password"], textarea
+        box-shadow: inset 0 0 10px $color-dark
+        border: 1px solid $color-dark
+        padding: 5px 8px
+        background: $color-light
+        border-radius: 0px
+        margin-bottom: 25px
+        color: $color-dark
+    input[type="submit"]
+        +ms-btn-submit
+    p
+        color: #ffffff
+    a
+        color: $color-light
+        
+.ms_section_movies
+    width: 100%
+    float: left
+    padding: 0px
+    li
+        color: $color
+        list-style: none
+        padding: 2px
+        display: block
+        position: relative
+        img
+            width: 100%
+            height: auto
+            float:left
+        a
+            position: absolute
+            bottom: 0px
+            left: 0px
+            width: 100%
+            padding: 5px 10px
+            color: $color
+            opacity: 0.4
+            +ms-hover-transition(0.3s)
+            text-decoration: none
+            font-family: $font
+            font-size: $font-size-text
+            line-height: 100%
+            &:hover
+                opacity: 1.0
+                background-color: $color-dark
+                color: $color
+    .noplace
+        display:none
+    .wishlst
+        width: 32px
+        height: 32px
+        float: right
+        position: absolute
+        right: 5px
+        top: 5px
+        z-index: 20
+        background-image: image-url("icon/clock_2.png")
+    .watched
+        width: 32px
+        height: 32px
+        float: right
+        position: absolute
+        right: 5px
+        top: 5px
+        z-index: 20
+        background-image: image-url("icon/record.png")
+    .bnndlst
+        width: 32px
+        height: 32px
+        float: right
+        position: absolute
+        right: 5px
+        top: 5px
+        z-index: 20
+        background-image: image-url("icon/ban.png")
+    &_title_vote
+        width: 32px
+        height: 32px
+        float: right
+        position: absolute
+        right: 2px
+        top: 2px
+        z-index: 20
+        color: $color
+        background-color: $color-dark
+        font-family: $font
+        font-size: $font-size-text
+        text-align: center
+        padding-top: 8px
+.ms_movie
+    h2
+        width: 100%
+        position: relative
+        margin: 10px 0px
+        float: left
+    &_name
+        font-family: $font
+        font-size: $font-size-huge
+        color: $color-dark
+        text-align: left
+        float: left
+    &_year
+        font-family: $font
+        position: absolute
+        color: $color-dark
+        background-color: $color
+        z-index: 200
+        top: 0px
+        right: 0px
+        padding: 5px
+    img
+        width: 100%
+            
+.ms_movie_watched
+    width: 100%
+    position: relative
+    margin: 10px 0px
+    float: left
+    border-bottom: solid 1px $color-light
+    &_name
+        font-family: $font
+        font-size: $font-size-text
+        color: $color-dark
+        text-align: left
+        float: left
+    &_date
+        font-family: $font
+        position: absolute
+        color: $color
+        z-index: 200
+        top: 0px
+        right: 0px
+        
+.ms_btn_box
+    +ms-btn-submit
+
+
+.ms_movie_header
+    font-family: $font
+    
+    
+h3
+    font-family: $font
+    font-size: $font-size-huge
+    color: $color-dark
+    text-align: left
+
+.ms_users
+    list-style: none
+    margin: 0px
+    padding: 0px
+    li
+        padding: 10px 0
+        border-bottom: 1px solid $gray-lighter
+        width: 100%
+    &_name
+        font-family: $font
+        font-size: $font-size-subheader
+        color: $color-darkest
+    &_show
+        width: 64px
+        height: 64px
+        float: right
+        background-image: image-url("icon/aperture.png")
+        &:hover
+            background-color: #ffffff
+            background-image: image-url("icon/aperture_h.png")
+    &_edit   
+        width: 64px
+        height: 64px
+        float: right
+        margin-right: 5px
+        background-image: image-url("icon/eject2.png")
+        &:hover
+            background-color: #ffffff
+            background-image: image-url("icon/eject2_h.png")
+footer
+    margin-top: 45px
+    padding-top: 5px
+    border-top: 1px solid #eaeaea
+    color: #777
+    a
+        color: #555
+        background-color: #ffffff
+        font-family: $font
+        &:hover
+            background-color: #ffffff
+            color: #222
+    small
+        float: left
+        font-family: $font
+    ul
+        float: right
+        list-style: none
+        li
+            float: left
+            margin-left: 15px
+
+.micropost_form
+    textarea
+        box-shadow: inset 0 0 10px $color-dark
+        border: 1px solid $color-dark
+        padding: 5px 8px
+        background: $color-light
+        border-radius: 0px
+        margin-bottom: 25px
+        
+        
+.stats
+    overflow: auto
+    margin-top: 0
+    padding: 0
+    a
+        float: left
+        padding: 10px 10px
+        border-left: 1px solid $gray-lighter
+        color: gray
+        font-family: $font
+        &:first-child
+            border: 0
+        &:hover
+            text-decoration: none
+            color: blue
+            color: $color-dark
+            background-color: $color
+    strong
+        display: block
+        
+.following_feed
+    padding: 0px
+    font-family: $font
+    li
+        display: inline-block
+        float: left
+        width: 100%
+        padding-bottom: 10px
+        border-bottom: solid 1px $color-dark
+    &_name
+        width: 100%
+        font-size: $font-size-medium
+        float: left
+        line-height: 1.4
+    &_movie
+        font-size: $font-size-medium
+        float: left
+        line-height: 1.4
+    &_date
+        width: 100%
+        float: left
+        font-size: $font-size-tiny
+        text-align: right
+
+.ms_movie_votes
+    &_vote
+        width: 40px
+        height: 40px
+        color: $color
+        background-color: $color-dark
+        font-family: $font
+        +ms-hover-transition(0.3s)
+        font-size: $font-size-text
+        text-decoration: none
+        float: left
+        text-align: center
+        margin: 0px 3px 5px 0px
+        padding-top: 12px
+        &:hover, &:active, &_active, &:focus
+            color: $color-darkest
+            background-color: $color
+            text-decoration: none
+    &_square
+        width: 430px
+        float: left
+        padding: 0px
+        li
+            display: inline-block
+            float: left
+    &_history
+        width: 100%
+        padding: 20px 20px
+        li
+            display: inline-block
+            width: 100%
+            font-family: $font
+            
+.welcome
+    font-family: $font
+    border-radius: 0px!important
+    h1
+        color: $color
+        background-color: $shadow
+        margin-top: 100px
+        margin-bottom: 0px
+        padding-top: 20px
+        padding-bottom: 10px
+    h2
+        color: $color
+        background-color: $shadow    
+        margin-top: 0px
+        margin-bottom: 100px
+        padding-top: 10px
+        padding-bottom: 20px
+        a
+            color: $color-light
+
+.following_feed
+    height: 300px
+    overflow-y: scroll
+    
+.plcment_feed
+    padding: 0px
+    height: 300px
+    overflow-y: scroll
+    li 
+        display: inline-block
+        width: 100%
+
+.microposts
+    list-style: none
+    padding: 0
+    font-family: $font
+    li
+        padding: 10px 0
+        border-top: 1px solid #e8e8e8
+    .user
+        margin-top: 5em
+        padding-top: 0
+    .content
+        display: block
+        margin-left: 60px
+        img
+            display: block
+            padding: 5px 0
+    .timestamp
+        color: $gray-light
+        display: block
+        margin-left: 60px
+    .gravatar
+        float: left
+        margin-right: 10px
+        margin-top: 5px
+
+
+
+
+
+
